@@ -21,7 +21,7 @@ class Robot2I013(object):
     WHEEL_BASE_CIRCUMFERENCE = WHEEL_BASE_WIDTH * math.pi # perimetre du cercle de rotation (mm)
     WHEEL_CIRCUMFERENCE      = WHEEL_DIAMETER   * math.pi # perimetre de la roue (mm)
     
-    def __init__(self,controler,fps=25,resolution=None,servoPort = "SERVO1",motionPort="AD1"):
+    def __init__(self,fps=25,resolution=None,servoPort = "SERVO1",motionPort="AD1"):
         """ 
             Initialise le robot
 
@@ -34,7 +34,6 @@ class Robot2I013(object):
         """
 
         self._gpg= EasyGoPiGo3()
-        self.controler = controler
         self.fps=fps
         self.LED_LEFT_EYE = self._gpg.LED_LEFT_EYE
         self.LED_RIGHT_EYE = self._gpg.LED_RIGHT_EYE
